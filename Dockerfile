@@ -60,7 +60,7 @@ ENV JUPYTERLAB_PORT      8888
 ENV JUPYTERLAB_WORKSPACE /root/.jupyter/workspace
 ENV JUPYTERLAB_PID       /root/.jupyter/pid
 
-RUN pip3 install jupyterlab py4j && \
+RUN pip3 install jupyterlab py4j pyarrow pandas && \
     jupyter lab --generate-config
 
 ## Log configurations

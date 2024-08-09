@@ -4,6 +4,10 @@ Este projeto consiste em analisar conjuntos de dados do mundo real usando PySpar
 - MinIO (AGPL v3) :flamingo:
 - Jupyter Lab
 
+# :card_index_dividers:	Dataset's
+Os dados brutos são armazenados na camada raw do MinIO :flamingo:
+- :white_check_mark: Record Linkage Comparison Patterns https://bit.ly/1Aoywaq
+
 ### Build e start containers
 Primeiro, você precisa construir uma imagem docker digitando `make build`. Depois disso, digite `make start` toda vez que quiser iniciar o serviço.
 
@@ -27,9 +31,6 @@ Para inspecionar os estágios de execução, você pode acessar [http://localhos
 ### Stop containers
 Para parar todos os contêineres, digite `make stop` no terminal e espere que todos eles sejam baixados.
 
-### Exemplo uso do Jupyter, PySpark and MinIO
-Um exemplo usando PySpark e MinIO por meio do Jupyter está disponível em [workspace/sample.ipynb](workspace/sample.ipynb).
-
 ## :package: Volumes
-Ao executar os contêineres pela primeira vez, um diretório `workspace/` será criado na raiz do projeto. Esta pasta é compartilhada entre a máquina host e o jupyter workspace em execução dentro do contêiner.
+Os exemplos estão no diretório `workspace/` na raiz do projeto. Esta pasta é compartilhada entre a máquina host e o jupyter workspace em execução dentro do contêiner.
 
