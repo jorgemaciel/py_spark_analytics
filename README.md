@@ -1,6 +1,7 @@
 # :whale: Análise de dados com PySpark
 Este projeto consiste em analisar conjuntos de dados do mundo real usando PySpark em um ambiente dockerizado, usando as seguintes ferramentas:
 - PySpark (3.5.1)
+- Delta Lake (3.2.0)
 - MinIO (AGPL v3) :flamingo:
 - Jupyter Lab
 

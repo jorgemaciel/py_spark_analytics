@@ -25,7 +25,7 @@ RUN update-alternatives --install "/usr/bin/python" "python" "$(which python3)" 
 ENV SPARK_HOME /opt/spark
 
 RUN mkdir -p ${SPARK_HOME} && \
-    curl -o /tmp/spark.tgz "https://dlcdn.apache.org/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz" && \
+    curl -o /tmp/spark.tgz "https://dlcdn.apache.org/spark/spark-3.5.2/spark-3.5.2-bin-hadoop3.tgz" && \
     tar -xf /tmp/spark.tgz -C ${SPARK_HOME} --strip-components=1 && \
     rm /tmp/spark.tgz
 
@@ -60,8 +60,8 @@ ENV JUPYTERLAB_PORT      8888
 ENV JUPYTERLAB_WORKSPACE /root/.jupyter/workspace
 ENV JUPYTERLAB_PID       /root/.jupyter/pid
 
-RUN pip3 install jupyterlab py4j pyarrow pandas && \
-    jupyter lab --generate-config
+RUN pip3 install jupyterlab py4j pyarrow pandas delta-spark==3.2.0 && \
+    jupyter lab --generate-config 
 
 ## Log configurations
 ENV JUPYTERLAB_LOG_DIR   /root/.jupyter/logs
